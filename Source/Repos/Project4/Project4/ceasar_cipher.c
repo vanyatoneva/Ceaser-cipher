@@ -9,14 +9,16 @@ void decript(char* msg, int k);
 main() {
 	char msg[MSGL];
 	char c;
-	int i = 0;
+	int k, i = 0;
 	printf("Enter your message : ");
-	while ((c = getchar()) != EOF && c != '\n') {
+	/*while ((c = getchar()) != EOF && c != '\n') {
 		msg[i++] = c;
 	}
-	msg[i] = '\0';
+	msg[i] = '\0'; */
+	scanf("%s", msg);
 	printf("Enter the key : ");
-	int k = getchar() - 48;      
+	/*int k = getchar() - 48; */
+	scanf("%d", &k);
 	char* ptr = msg;
 	cript(&msg, k);
 	printf("Your cripted message is : ");
